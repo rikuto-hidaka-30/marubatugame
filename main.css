@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#back {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    position: relative;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 90px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.hard {
+    background-color: #ffb366;
+    background-image:
+        repeating-linear-gradient(-45deg, #fcc351, #fcc351 8px, transparent 0, transparent 16px);
+}
+
+.easy {
+    background-color: #d1ff66;
+    background-image:
+        repeating-linear-gradient(-45deg, #c9fc51, #c9fc51 8px, transparent 0, transparent 16px);
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#game {
+    display: grid;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 5px;
+}
+
+.cell {
+    font-size: 130px;
+    font-weight: bold;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff55;
+    backdrop-filter: blur(3px);
+}
+
+.o {
+    color: #f48fb1;
+}
+
+.x {
+    color: #2196f3;
+}
+
+.intro,
+.mode-select,
+.result-select {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 10;
+}
+
+.intro.hidden,
+.mode-select.hidden,
+.result-select.hidden {
+    display: none;
+}
+
+.intro-card,
+.mode-card,
+.result-card {
+    width: min(90vw, 420px);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 16px;
+    padding: 24px 20px 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.intro-card h2,
+.mode-card h2,
+.result-card h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 28px;
+}
+
+.intro-card ul {
+    margin: 0 0 20px;
+    padding-left: 1.4em;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.mode-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 0 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.result-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#start-button,
+#mode-start-button,
+#replay-button,
+#end-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 999px;
+    background: #ff8a00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start-button:hover,
+#mode-start-button:hover,
+#replay-button:hover,
+#end-button:hover {
+    background: #f57600;
+}
+
+#end-button {
+    background: #6b7280;
+}
+
+#end-button:hover {
+    background: #4b5563;
+}

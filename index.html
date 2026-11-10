@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>接待〇✕ゲーム</title>
+    <meta charset="utf-8">
+    <script src="./ai.js" defer></script>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="back" class="hard">
+        <h1>接待〇✕ゲーム</h1>
+
+        <div id="intro" class="intro">
+            <div class="intro-card">
+                <h2>ゲーム説明</h2>
+                <ul>
+                    <li>このゲームは3×3の〇✕ゲームです。</li>
+                    <li>あなたは先攻で「〇」を置きます。</li>
+                    <li>その後、相手のAIが「✕」を自動で置きます。</li>
+                    <li>横・縦・斜めに3つ揃えた方が勝ちです。</li>
+                    <li>どちらも3つ揃えられない場合は引き分けです。</li>
+                </ul>
+                <button id="start-button" type="button">ゲーム開始</button>
+            </div>
+        </div>
+
+        <div id="mode-select" class="mode-select hidden">
+            <div class="mode-card">
+                <h2>モードを選んでください</h2>
+                <div class="mode-options">
+                    <label><input type="radio" name="mode" value="hard" checked>激ムズモード</label>
+                    <label><input type="radio" name="mode" value="easy">接待モード</label>
+                </div>
+                <button id="mode-start-button" type="button">開始</button>
+            </div>
+        </div>
+
+        <div id="game">
+            <div id="cell_0_0" class="cell"></div>
+            <div id="cell_0_1" class="cell"></div>
+            <div id="cell_0_2" class="cell"></div>
+            <div id="cell_1_0" class="cell"></div>
+            <div id="cell_1_1" class="cell"></div>
+            <div id="cell_1_2" class="cell"></div>
+            <div id="cell_2_0" class="cell"></div>
+            <div id="cell_2_1" class="cell"></div>
+            <div id="cell_2_2" class="cell"></div>
+        </div>
+        <div id="message"></div>
+
+        <div id="result-select" class="result-select hidden">
+            <div class="result-card">
+                <h2>もう一度遊びますか？</h2>
+                <div class="result-actions">
+                    <button id="replay-button" type="button">もう一度遊ぶ</button>
+                    <button id="end-button" type="button" class="secondary">終了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
